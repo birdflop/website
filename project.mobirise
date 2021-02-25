@@ -7,11 +7,11 @@
       "title": "Mobirise 5",
       "styling": {
         "primaryColor": "#6592e6",
-        "secondaryColor": "#ff6666",
-        "successColor": "#40b0bf",
+        "secondaryColor": "#ffffff",
+        "successColor": "#6592e6",
         "infoColor": "#47b5ed",
-        "warningColor": "#FFE161",
-        "dangerColor": "#ff9966",
+        "warningColor": "#4479d9",
+        "dangerColor": "#4479d9",
         "mainFont": "Jost",
         "display1Font": "Jost",
         "display1Size": 4.6,
@@ -40,9 +40,44 @@
         "url": "https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
       },
       {
-        "css": "'Pacifico', handwriting",
-        "name": "Pacifico",
-        "url": "https://fonts.googleapis.com/css?family=Pacifico:400"
+        "css": "'Rubik', sans-serif",
+        "name": "Rubik",
+        "url": "https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800,900,300i,400i,500i,600i,700i,800i,900i"
+      },
+      {
+        "css": "'Oxygen', sans-serif",
+        "name": "Oxygen",
+        "url": "https://fonts.googleapis.com/css?family=Oxygen:300,400,700"
+      },
+      {
+        "css": "'Josefin Sans', sans-serif",
+        "name": "Josefin Sans",
+        "url": "https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,400,500,600,700,100i,200i,300i,400i,500i,600i,700i"
+      },
+      {
+        "css": "'Karla', sans-serif",
+        "name": "Karla",
+        "url": "https://fonts.googleapis.com/css?family=Karla:200,300,400,500,600,700,800,200i,300i,400i,500i,600i,700i,800i"
+      },
+      {
+        "css": "'Fira Sans', sans-serif",
+        "name": "Fira Sans",
+        "url": "https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      },
+      {
+        "css": "'Balsamiq Sans', display",
+        "name": "Balsamiq Sans",
+        "url": "https://fonts.googleapis.com/css?family=Balsamiq+Sans:400,400i,700,700i"
+      },
+      {
+        "css": "'Poppins', sans-serif",
+        "name": "Poppins",
+        "url": "https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      },
+      {
+        "css": "'Varela Round', sans-serif",
+        "name": "Varela Round",
+        "url": "https://fonts.googleapis.com/css?family=Varela+Round:400"
       }
     ],
     "uniqCompNum": 73,
