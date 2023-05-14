@@ -20,7 +20,7 @@ body {
   color: #232323;
 }
 
-.plan .plan-body ul li span {
+.plan .plan-body ul li, .plan .plan-body ul li span {
   color: #232323;
 }
 
