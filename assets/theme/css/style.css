@@ -12,6 +12,18 @@ body {
   position: relative;
 }
 
+.plan h6 {
+  color: #232323;
+}
+
+.plan .plan-header .plan-price p.price.term {
+  color: #232323;
+}
+
+.plan .plan-body ul li span {
+  color: #232323;
+}
+
 section,
 .container,
 .container-fluid {
