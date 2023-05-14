@@ -8,7 +8,7 @@ body {
   font-family: 'Jost', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #ffffff;
+  color: #232323;
   position: relative;
 }
 
@@ -72,6 +72,7 @@ a {
   word-break: break-word;
   word-wrap: break-word;
   font-weight: 400;
+  color: #ffffff;
 }
 
 b,
