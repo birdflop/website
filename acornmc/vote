@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open Webpage Links</title>
+    <script type="text/javascript">
+        function openLinks() {
+            window.open("https://bit.ly/acornmc1");
+            window.open("https://bit.ly/acornmc2");
+            window.open("https://bit.ly/acornmc3");
+            window.open("https://bit.ly/acornmc6");
+        }
+    </script>
+</head>
+<body onload="openLinks()">
+    <h1>Opening Webpage Links...</h1>
+</body>
+</html>
