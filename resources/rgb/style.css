@@ -121,6 +121,9 @@ footer{
   margin-right:auto;
   margin-top:120px;
 }
+.footer-left p {
+    text-align: left;
+}
 #title {
     position:relative;
     background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
