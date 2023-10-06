@@ -1,3 +1,8 @@
+
+body {
+  font-size: 16px; /* Base font size */
+}
+
 .color {
   width: 100%;
 }
@@ -147,4 +152,21 @@ footer{
 }
 body{
   margin: auto;
+}
+
+a, input[type='checkbox'], label {
+  margin: 8px 0; /* Vertical margin */
+  padding: 8px 0; /* Vertical padding */
+}
+
+/* For smaller screens, you may need to adjust the font size and spacing further */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Adjust base font size for smaller screens */
+  }
+  
+  a, input[type='checkbox'], label {
+    margin: 4px 0; /* Reduce vertical margin */
+    padding: 4px 0; /* Reduce vertical padding */
+  }
 }
