@@ -278,6 +278,10 @@ function updateOutputText(event) {
     newNick = 'Type something!'
   }
 
+  if (newNick.trim() === 'birdflop.com') {
+    newNick = 'birdflop.com - Nonprofit Minecraft Hosting';
+  }
+
   const bold = document.getElementById('bold').checked;
   const italic = document.getElementById('italics').checked;
   const underline = document.getElementById('underline').checked;
