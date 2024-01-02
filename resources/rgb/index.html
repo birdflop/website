@@ -61,14 +61,44 @@
                           class="form-control"
                           onchange="updateOutputText(event);">
                     <option value='0'>Default (&#rrggbb)</option>
-                    <option value='2'>Legacy (&x&r&r&g&g&b&b)</option>
-                    <option value='6'>Console (§x§r§r§g§g§b§b)</option>
-                    <option value='8'>MOTD (\u00A7x)</option>
-                    <option value='1'>Chat (<#rrggbb>)</option>
-                    <option value='7'>BBCode [COLOR=#rrggbb]</option>
+                    <option value='1'>Legacy (&x&r&r&g&g&b&b)</option>
+                    <option value='2'>Console (§x§r§r§g§g§b§b)</option>
+                    <option value='3'>MOTD (\u00A7x)</option>
+                    <option value='4'>Chat (<#rrggbb>)</option>
+                    <option value='5'>BBCode [COLOR=#rrggbb]</option>
+                    <option value="6">Custom</option>
                   </select>
                 </div>
               </div>
+              <div id="custom-format-inputs" style="display: none;">
+                <div class="row">
+                  <p>Placeholders</p>
+                  <p>$1 - (R)RGGBB</p>
+                  <p>$2 - R(R)GGBB</p>
+                  <p>$3 - RR(G)GBB</p>
+                  <p>$4 - RRG(G)BB</p>
+                  <p>$5 - RRGG(B)B</p>
+                  <p>$6 - RRGGB(B)</p>
+                  <p>$f - Formatting</p>
+                  <p>$c - Character</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-3" style="padding-left: 0;">
+                    <label for="custom-format">Custom Format</label>
+                    <input class="form-control" id="custom-format" type="text" maxlength="100" placeholder="Your Text"
+                            value="&#$1$2$3$4$5$6$f$c" oninput="javascript: updateOutputText(event);"
+                            onchange="javascript: updateOutputText(event)">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3" style="padding-left: 0;">
+                    <label for="format-character">Format Character</label>
+                    <input class="form-control" id="format-character" type="text" maxlength="100" placeholder="Your Text"
+                            value="&" oninput="javascript: updateOutputText(event);"
+                            onchange="javascript: updateOutputText(event)">
+                  </div>
+                </div>
+              </div>            
               <div class="row">
                 <div class="col-md-3" style="padding-left: 0;">
                   <label for="color-preset">Color Preset</label>

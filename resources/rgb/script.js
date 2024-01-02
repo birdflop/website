@@ -1,12 +1,16 @@
 // elements for obtaining vals
 const nickName = document.getElementById('nickname');
 const coloredNick = document.getElementById('coloredNick');
+const custom_format = document.getElementById('custom-format');
+const format_character = document.getElementById('format-character');
+
 const savedColors = ['084CFB', 'ADF3FD', getRandomHexColor(), getRandomHexColor(), getRandomHexColor(), getRandomHexColor(), getRandomHexColor(), getRandomHexColor(), getRandomHexColor(), getRandomHexColor()];
 const presets = {
   1: {
     colors: ["FF0000", "FF7F00", "FFFF00", "00FF00", "0000FF", "4B0082", "9400D3"],
   }
 }
+
 const formats = {
   0: {
     outputPrefix: '',
@@ -16,53 +20,52 @@ const formats = {
   },
   1: {
     outputPrefix: '',
-    template: '<#$1$2$3$4$5$6>$f$c',
+    template: '&x&$1&$2&$3&$4&$5&$6$f$c',
     formatChar: '&',
     maxLength: 256
   },
   2: {
     outputPrefix: '',
-    template: '&x&$1&$2&$3&$4&$5&$6$f$c',
-    formatChar: '&',
-    maxLength: 256
-  },
-  3: {
-    outputPrefix: '/nick ',
-    template: '&#$1$2$3$4$5$6$f$c',
-    formatChar: '&',
-    maxLength: 256
-  },
-  4: {
-    outputPrefix: '/nick ',
-    template: '<#$1$2$3$4$5$6>$f$c',
-    formatChar: '&',
-    maxLength: 256
-  },
-  5: {
-    outputPrefix: '/nick ',
-    template: '&x&$1&$2&$3&$4&$5&$6$f$c',
-    formatChar: '&',
-    maxLength: 256
-  },
-  6: {
-    outputPrefix: '',
     template: '§x§$1§$2§$3§$4§$5§$6$f$c',
     formatChar: '§',
     maxLength: null
   },
-  7: {
-    outputPrefix: '',
-    template: '[COLOR=#$1$2$3$4$5$6]$c[/COLOR]',
-    formatChar: null,
-    maxLength: null
-  },
-  8: {
+  3: {
     outputPrefix: '',
     template: '\\u00A7x\\u00A7$1\\u00A7$2\\u00A7$3\\u00A7$4\\u00A7$5\\u00A7$6$c',
     formatChar: null,
     maxLength: null
   },
+  4: {
+    outputPrefix: '',
+    template: '<#$1$2$3$4$5$6>$f$c',
+    formatChar: '&',
+    maxLength: 256
+  },
+  5: {
+    outputPrefix: '',
+    template: '[COLOR=#$1$2$3$4$5$6]$c[/COLOR]',
+    formatChar: null,
+    maxLength: null
+  },
+  6: {
+    outputPrefix: '',
+    template: custom_format.value,
+    formatChar: format_character.value,
+    maxLength: null
+  },
 };
+
+custom_format.addEventListener('input', function () {
+  formats[6].template = custom_format.value;
+  updateOutputText();
+});
+
+// Event listener for format_character input change
+format_character.addEventListener('input', function () {
+  formats[6].formatChar = format_character.value;
+  updateOutputText();
+});
 
 function darkMode() {
   if (document.getElementById('darkmode').checked == true) {
@@ -78,6 +81,8 @@ function darkMode() {
     document.getElementById('numOfColors').classList.add("darktextboxes");
     document.getElementById('nickname').classList.add("darktextboxes");
     document.getElementById('outputText').classList.add("darktextboxes");
+    document.getElementById('custom-format').classList.add("darktextboxes");
+    document.getElementById('format-character').classList.add("darktextboxes");
     Array.from(document.getElementsByClassName("hexColor")).forEach(e => {
       document.getElementById(e.id).classList.add("darktextboxes");
     })
@@ -93,6 +98,8 @@ function darkMode() {
     document.getElementById('numOfColors').classList.remove("darktextboxes");
     document.getElementById('nickname').classList.remove("darktextboxes");
     document.getElementById('outputText').classList.remove("darktextboxes");
+    document.getElementById('custom-format').classList.remove("darktextboxes");
+    document.getElementById('format-character').classList.remove("darktextboxes");
     Array.from(document.getElementsByClassName("hexColor")).forEach(e => {
       document.getElementById(e.id).classList.remove("darktextboxes");
     })
@@ -359,6 +366,31 @@ function displayColoredName(nickName, colors) {
     coloredNick.append(coloredNickSpan);
   }
 }
+
+$(document).ready(function() {
+  // Initially hide the custom text inputs
+  $('#custom-format-inputs').hide();
+
+  // Function to toggle visibility of custom text inputs
+  function toggleCustomInputs() {
+      var selectedFormat = $('#output-format').val();
+      if (selectedFormat == '6') {
+          $('#custom-format-inputs').show();
+      } else {
+          $('#custom-format-inputs').hide();
+      }
+  }
+
+  // Bind the function to the change event of the output-format dropdown
+  $('#output-format').change(function() {
+      toggleCustomInputs();
+      updateOutputText(event);
+  });
+
+  // Call the function initially to set the initial visibility
+  toggleCustomInputs();
+});
+
 
 function preset(n) {
   const colors = presets[n].colors
