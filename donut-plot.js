@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Other Hosting Expenses",
                 "Client Reimbursements",
                 "Sustainability Fund Contributions",
-                "Product Research",
+                "Market Research",
                 "Hosting Revenue",
                 "Charitable Donations"
             ],
