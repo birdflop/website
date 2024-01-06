@@ -44,11 +44,17 @@ const formats = {
   },
   5: {
     outputPrefix: '',
+    template: '<##$1$2$3$4$5$6>$f$c',
+    formatChar: '&',
+    maxLength: 256
+  },
+  6: {
+    outputPrefix: '',
     template: '[COLOR=#$1$2$3$4$5$6]$c[/COLOR]',
     formatChar: null,
     maxLength: null
   },
-  6: {
+  7: {
     outputPrefix: '',
     template: custom_format.value,
     formatChar: format_character.value,
@@ -57,13 +63,13 @@ const formats = {
 };
 
 custom_format.addEventListener('input', function () {
-  formats[6].template = custom_format.value;
+  formats[7].template = custom_format.value;
   updateOutputText();
 });
 
 // Event listener for format_character input change
 format_character.addEventListener('input', function () {
-  formats[6].formatChar = format_character.value;
+  formats[7].formatChar = format_character.value;
   updateOutputText();
 });
 
@@ -374,7 +380,7 @@ $(document).ready(function() {
   // Function to toggle visibility of custom text inputs
   function toggleCustomInputs() {
       var selectedFormat = $('#output-format').val();
-      if (selectedFormat == '6') {
+      if (selectedFormat == '7') {
           $('#custom-format-inputs').show();
       } else {
           $('#custom-format-inputs').hide();
