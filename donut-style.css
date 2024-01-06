@@ -11,6 +11,7 @@
     justify-content: center; /* Centers items vertically */
     height: auto; /* Adjust height to fit content */
     padding-bottom: 10px; /* Add padding at the bottom to ensure space for text */
+    max-width: 50%; /* Ensures the chart doesn't overflow its container */
 }
 
 .graph-description {
