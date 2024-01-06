@@ -63,13 +63,13 @@ const formats = {
 };
 
 custom_format.addEventListener('input', function () {
-  formats[7].template = custom_format.value;
+  formats[Object.keys(formats).length - 1].template = custom_format.value;
   updateOutputText();
 });
 
 // Event listener for format_character input change
 format_character.addEventListener('input', function () {
-  formats[7].formatChar = format_character.value;
+  formats[Object.keys(formats).length - 1].formatChar = format_character.value;
   updateOutputText();
 });
 
