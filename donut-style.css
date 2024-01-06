@@ -1,0 +1,28 @@
+.title-chart-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chart-container {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    height: auto; /* Adjust height to fit content */
+    padding-bottom: 10px; /* Add padding at the bottom to ensure space for text */
+}
+
+.graph-description {
+    color: grey;
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px; /* Add a little margin at the bottom if needed */
+    width: 100%; /* Ensures the text aligns with the width of the container */
+}
+.text-content {
+    flex: 2; /* Adjusts the size of the text content */
+    padding-left: 20px; /* Adds some space between the chart and the text */
+}
+
