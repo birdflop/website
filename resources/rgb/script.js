@@ -292,7 +292,7 @@ function updateOutputText(event) {
   }
 
   if (newNick.trim() === 'birdflop.com') {
-    newNick = 'birdflop.com - $8/mo Minecraft Hosting';
+    newNick = 'birdflop.com - $1.88/GB RAM Minecraft Hosting';
   }
 
   const bold = document.getElementById('bold').checked;
