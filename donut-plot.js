@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'rgba(0, 200, 100, 1)'
                 ],
                 borderWidth: 1,
-                data: [436.20, 301.53, 56.4, 206.8, 2500, 300, null, null] 
+                data: [436.20, 301.53, 80.07, 206.8, 2500, 300, null, null] 
             },
             {
                 // Inner Ring (REVENUE)
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'rgba(0, 200, 100, 1)'
                 ],
                 borderWidth: 1,
-                data: [null, null, null, null, null, null, 1034.89, 2866.31] 
+                data: [null, null, null, null, null, null, 1034.89, 2889.98] 
             }]
         },
         options: {
