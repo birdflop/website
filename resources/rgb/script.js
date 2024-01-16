@@ -291,8 +291,8 @@ function updateOutputText(event) {
     newNick = 'Type something!'
   }
 
-  if (newNick.trim() === 'birdflop.com') {
-    newNick = 'birdflop.com - $1.88/GB Minecraft Host';
+  if (newNick.trim() === 'play.hoglin.org') {
+    newNick = 'play.hoglin.org - Economy SMP';
   }
 
   const bold = document.getElementById('bold').checked;
