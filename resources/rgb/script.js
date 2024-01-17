@@ -20,41 +20,47 @@ const formats = {
   },
   1: {
     outputPrefix: '',
-    template: '&x&$1&$2&$3&$4&$5&$6$f$c',
+    template: '#$1$2$3$4$5$6$f$c',
     formatChar: '&',
     maxLength: 256
   },
   2: {
     outputPrefix: '',
+    template: '&x&$1&$2&$3&$4&$5&$6$f$c',
+    formatChar: '&',
+    maxLength: 256
+  },
+  3: {
+    outputPrefix: '',
     template: '§x§$1§$2§$3§$4§$5§$6$f$c',
     formatChar: '§',
     maxLength: null
   },
-  3: {
+  4: {
     outputPrefix: '',
     template: '\\u00A7x\\u00A7$1\\u00A7$2\\u00A7$3\\u00A7$4\\u00A7$5\\u00A7$6$c',
     formatChar: null,
     maxLength: null
   },
-  4: {
+  5: {
     outputPrefix: '',
     template: '<#$1$2$3$4$5$6>$f$c',
     formatChar: '&',
     maxLength: 256
   },
-  5: {
+  6: {
     outputPrefix: '',
     template: '<##$1$2$3$4$5$6>$f$c',
     formatChar: '&',
     maxLength: 256
   },
-  6: {
+  7: {
     outputPrefix: '',
     template: '[COLOR=#$1$2$3$4$5$6]$c[/COLOR]',
     formatChar: null,
     maxLength: null
   },
-  7: {
+  8: {
     outputPrefix: '',
     template: custom_format.value,
     formatChar: format_character.value,
@@ -380,7 +386,7 @@ $(document).ready(function() {
   // Function to toggle visibility of custom text inputs
   function toggleCustomInputs() {
       var selectedFormat = $('#output-format').val();
-      if (selectedFormat == '7') {
+      if (selectedFormat == '8') {
           $('#custom-format-inputs').show();
       } else {
           $('#custom-format-inputs').hide();
