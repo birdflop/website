@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /wiki/server-software-comparison
 Disallow: /acornmc/
 Disallow: /terms/
+Disallow: https://rgb.birdlfop.com
