@@ -1,0 +1,55 @@
+{
+  "name": "birdflop",
+  "version": "7.0.0",
+  "homepage": "https://www.birdflop.com",
+  "description": "The only 501(c)(3) nonprofit Minecraft server host.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuminescentDev/SimplyMC.git"
+  },
+  "engines": {
+    "node": ">=15.0.0"
+  },
+  "author": "LuminescentDev",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "qwik build",
+    "build.client": "vite build",
+    "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.server": "vite build -c adapters/cloudflare-pages/vite.config.ts",
+    "build.types": "tsc --incremental --noEmit",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "preview": "qwik build preview && vite preview",
+    "start": "vite --mode ssr --host",
+    "start.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --forcenode --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "qwik": "qwik"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "1.4.4",
+    "@builder.io/qwik-city": "1.4.4",
+    "@modular-forms/qwik": "^0.23.1",
+    "@types/eslint": "8.56.2",
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "@typescript-eslint/parser": "6.21.0",
+    "autoprefixer": "10.4.17",
+    "chart.js": "^4.4.1",
+    "eslint": "8.56.0",
+    "eslint-plugin-qwik": "1.4.4",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.35",
+    "qwik-ionicons": "^1.0.5",
+    "qwik-speak": "^0.21.0",
+    "simple-color-picker": "^1.0.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "5.3.3",
+    "undici": "^6.6.2",
+    "vite": "5.1.0",
+    "vite-tsconfig-paths": "4.3.1",
+    "wrangler": "latest",
+    "yaml": "^2.3.4",
+    "zod": "^3.22.4"
+  }
+}
